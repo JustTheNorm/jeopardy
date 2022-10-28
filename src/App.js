@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Jeopardy App</h1>
+      <h1>The Jeopardy App</h1>
       <GetQuestion />
     </div>
   );

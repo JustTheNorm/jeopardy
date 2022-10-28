@@ -1,10 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,200;1,200&family=Poppins:wght@400;500;600&family=Silkscreen&family=Source+Serif+Pro:wght@300&display=swap');
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@keyframes pulse2 {
+	0% {
+		transform: scale(0.98);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.98);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+
 .App {
   text-align: center;
 }
 
 body{
-  background-color: grey;
+  background-color: #4169E1;
   color: white;
+  font-family: 'Source Serif Pro', serif;
 }
 
 h2{
@@ -12,21 +50,99 @@ h2{
 }
 
 .answer{
-  color: red;
-}
-
-.question{
-  color: lightblue
-}
-
-.question:hover{
   color: lightcyan;
 }
 
-.decrease{
+.question{
+  color: light;
+  transition: .2s ease-in;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+}
 
+.question:hover{
+  cursor:pointer;
+  color: lightcyan;
+  transform: scale(1.1)
+}
+
+.decrease{
+  background-color: lightcoral;
+  transition: .2s ease-in
+}
+.decrease:hover{
+  cursor:pointer;
+  transform: scale(1.1)
 }
 
 .increase{
+  background-color: lightgreen
+}
+.increase:hover{
+  cursor:pointer;
+  transition: .2s ease-in;
+  transform: scale(1.1)
+}
+
+.reset{
+  background-color: lightgoldenrodyellow;
+  transition: .2s ease-in
+}
+.reset:hover{
+  cursor:pointer;
+  transform: scale(1.1)
   
+}
+
+.getquestion{
+  background-color: lightsalmon;
+  transition: .2s ease-in;
+  height: 50px;
+  width:25em;
+  border-radius: 15px;
+  animation: pulse 2s infinite;
+}
+
+
+.getquestion:hover{
+  cursor:pointer;
+  /* background-color: lavender; */
+  transform: scale(1.1);
+  background-color: lightseagreen;
+}
+
+.category{
+  color: lightsalmon;
+}
+
+.categoryTitle{
+  color: lightgoldenrodyellow
+}
+
+.point{
+  color: lightskyblue;
+
+}
+
+.showAnswer{
+  height: 60px;
+  width: 10rem;
+  transition: .5s ease-in;
+  border-radius: 0px;
+  background-color: aqua;
+  animation: pulse2 3s infinite;
+}
+
+.showAnswer:hover{
+  background-color: #D7A4A3;
+  cursor:pointer;
+  border-radius: 30px;
+  transition: .5s ease-out;
+}
+
+.double{
+  color: darkorange;
+  transition: .5s ease-in;
+  animation: pulse2 2s infinite;;
 }
