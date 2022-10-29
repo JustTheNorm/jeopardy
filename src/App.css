@@ -97,7 +97,7 @@ h2{
 
 .getquestion{
   background-color: lightsalmon;
-  transition: .2s ease-in;
+  transition: .6s ease-in;
   height: 50px;
   width:25em;
   border-radius: 15px;
@@ -145,4 +145,17 @@ h2{
   color: darkorange;
   transition: .5s ease-in;
   animation: pulse2 2s infinite;;
+}
+
+.fade-in{
+  animation: fadeIn 3s;
+}
+
+#answertoggle{
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
