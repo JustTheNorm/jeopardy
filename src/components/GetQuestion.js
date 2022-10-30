@@ -64,11 +64,11 @@ const GetQuestion = (props) => {
   const [isTextHidden, setTextHidden] = useState(true);
 
   const onClick = () => setTextHidden(!isTextHidden);
-  // const onClicks= () => setTextHidden(!isTextHidden);
+  const onClicks= () => setTextHidden(!isTextHidden);
 
   const Text = () => <div>Answer: {question[0].answer}</div>;
 
-  // const targetDiv = document.querySelector("answertoggle");
+  const targetDiv = document.querySelector("answertoggle");
   // const btn = document.getElementById("toggle");
 
   // const showAnswer = () => {
@@ -133,7 +133,7 @@ const GetQuestion = (props) => {
       <br />
 
       {/* 10 questions */}
-      <button onClick={get10Questions}>Get 10 Questions</button>
+      {/* <button onClick={get10Questions}>Get 10 Questions</button> */}
 
       {questions == null
         ? ""
@@ -141,6 +141,7 @@ const GetQuestion = (props) => {
             const { question, answer, value, category } = q;
             return (
               <>
+              {/* <div key={idx}>
                 <h2>Question #{idx + 1}</h2>
                 <h2>{question == null ? "" : question}</h2>
                 <h2 className="category">
@@ -153,7 +154,6 @@ const GetQuestion = (props) => {
                   Point Value: {question == null ? "" : value}
                 </h3>
                 <h2 className="answer">{!isTextHidden ? answer : null}</h2>
-                {/* <h2 className="answerTitle">Answer: </h2> */}
                 {question == null ? (
                   ""
                 ) : (
@@ -164,9 +164,10 @@ const GetQuestion = (props) => {
                 <br />
                 <br />
                 <br />
-                <button className="showAnswer" id="toggle">
+                <button className="showAnswer" id="toggle" onClick={onClicks}>
                   {isTextHidden ? "Show Answer" : "Hide Answer"}
                 </button>
+                </div> */}
               </>
             );
           })}
