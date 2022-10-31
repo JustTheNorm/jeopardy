@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import react from "react";
 
 const GetQuestion = (props) => {
-  const url = "http://jservice.io/api/random";
+  const url = "https://jservice.io/api/random";
 
   //state to hold the coin data
   const [question, setQuestion] = useState(null);
@@ -29,7 +29,7 @@ const GetQuestion = (props) => {
 
   const get10Questions = async () => {
     try {
-      const response = await fetch("http://jservice.io/api/random?count=10");
+      const response = await fetch("https://jservice.io/api/random?count=10");
       const data = await response.json();
       console.log(data);
 
@@ -71,11 +71,11 @@ const GetQuestion = (props) => {
   const targetDiv = document.querySelector("answertoggle");
   // const btn = document.getElementById("toggle");
 
-  // const showAnswer = () => {
-  //   if (targetDiv.style.display !== "none") {
-  //     targetDiv.style.display = "none";
+  // const showAnswer = (e) => {
+  //   if (e.style.display !== "none") {
+  //     e.style.display = "none";
   //   } else {
-  //     targetDiv.style.display = "block";
+  //     e.style.display = "block";
   //   }
   // }
   // const Text10 = () => <div>Answer: {questions.answer}</div>
@@ -141,7 +141,7 @@ const GetQuestion = (props) => {
             const { question, answer, value, category } = q;
             return (
               <>
-              {/* <div key={idx}>
+              <div key={idx}>
                 <h2>Question #{idx + 1}</h2>
                 <h2>{question == null ? "" : question}</h2>
                 <h2 className="category">
@@ -165,9 +165,9 @@ const GetQuestion = (props) => {
                 <br />
                 <br />
                 <button className="showAnswer" id="toggle" onClick={onClicks}>
-                  {isTextHidden ? "Show Answer" : "Hide Answer"}
+                  {isTextHidden? "Show Answer" : "Hide Answer"}
                 </button>
-                </div> */}
+                </div>
               </>
             );
           })}
